@@ -4,9 +4,12 @@ import time
 from bs4 import BeautifulSoup
 import requests
 
-url = 'https://manga-lek.com/mangalek/'
+url = 'https://manga-lek.com/mangalek/' #change url cause the website is banned
 count = 1
 count_ch = 1
+
+#new
+download_path="C:/Users/khali/Desktop/web_manga"  #use this for donwload path using tkinter or somthing else 
 
 
 def get_request(link):
@@ -52,12 +55,11 @@ name = manga_name.replace(" ", "-")
 new_url = url+name+"/"
 
 try:
-    os.mkdir(f'C:/Users/khali/Downloads{manga_name}/') # you should make it more dynamice for windows user and linux (change /home/khalil/...)
+    os.mkdir(f'{download_path}/{manga_name}/')
 except Exception:
     pass
 
-path_manga = f'C:/Users/khali/Downloads{manga_name}/' # the same problme as the first one 
-
+path_manga = f'{download_path}/{manga_name}/' 
 ch = input("chapter number : ")
 path_ch = path_manga + ch
 total = 10
