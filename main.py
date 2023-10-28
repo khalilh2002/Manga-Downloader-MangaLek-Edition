@@ -5,13 +5,13 @@ from bs4 import BeautifulSoup
 import requests
 from tkinter import filedialog
 
-url = 'https://manga-lek.com/mangalek/' #change url cause the website is banned
+url = 'https://manga-like.net/manga/' #change url cause the website is banned
 count = 1
 count_ch = 1
 
 #new
 download_path="C:/Users/khali/Desktop/web_manga"  #use this for donwload path using tkinter or somthing else 
-folder_selected = filedialog.askdirectory()
+download_path= filedialog.askdirectory()
 
 
 def get_request(link):
