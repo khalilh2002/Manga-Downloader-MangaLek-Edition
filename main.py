@@ -49,7 +49,7 @@ def save_image(src):
     data = requests.get(src)
     data = data.content
     open(f"img_{count}.jpg", "wb").write(data) #create and write data in the image
-    print('Download')
+    print(f'Download {count}')
 
 
 manga_name = input('the name of manga :  ')
