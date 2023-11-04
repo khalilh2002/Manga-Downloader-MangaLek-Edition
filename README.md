@@ -21,4 +21,8 @@ and then 'requests'
 ```
 pip3 install requests
 ```
+install lxml parser library
+```
+pip install lxml
+```
 
