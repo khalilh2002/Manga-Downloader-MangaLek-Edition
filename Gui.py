@@ -24,19 +24,33 @@ class Gui(tk.Tk):
         
         self.label_ask_name = tk.Label(self,text="give the name of the manga",font=font_ask)
         self.input_ask_name = tk.Entry(self)
+        
+        self.label_chapter = tk.Label(self,text="give me  chapter number ",font=font_ask)
+        self.inuput_chapter = tk.Entry(self)
+        
         self.button_submit = tk.Button(self, text="Submit", command=self.submit_name_manga)
         
         self.label_ask_name.pack()
         self.input_ask_name.pack()
+        
+        self.label_chapter.pack()
+        self.inuput_chapter.pack()
+        
         self.button_submit.pack()
         
     def askdirectory(self):
         self.download_Path = filedialog.askdirectory()
+        #continue
         
     def submit_name_manga(self):
         self.manga = self.input_ask_name.get()
         self.manga = self.manga.strip().replace(" ", "-")
-
+        
+        self.chapter_number = self.inuput_chapter.get().strip()
+        #continue
+        
+        
+        
 
 if __name__ == "__main__":
     window = Gui()
