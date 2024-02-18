@@ -1,8 +1,11 @@
 # mangalek-web-scraping
-just trying to donwload manga from mangalek website using 'BeautifulSoup'
+just trying to download manga from the Mangalek website using 'BeautifulSoup'
+
+# Notice🚩🚩🚩
+it's preferable to use the main.py as CLI if not you could use the Gui.py as interface graphique but it's still under development
 
 ## install pip
-you need to install python in your windows ,
+you need to install Python on your windows ,
 then open powershell or cmd and write
 ```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -13,7 +16,7 @@ python get-pip.py
 ```
 
 ## installation 
-first you need to install 'BeautifulSoup' using pip
+first, you need to install 'BeautifulSoup' using pip
 ```
 pip3 install beautifulsoup4
 ```
