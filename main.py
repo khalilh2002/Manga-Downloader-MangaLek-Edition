@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 from tkinter import filedialog
 
+
 url = 'https://manga-like.net/manga/' #change url cause the website is banned
 count = 1
 count_ch = 1
