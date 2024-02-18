@@ -7,24 +7,32 @@ from tkinter import filedialog
 
 class cli:
     
-    def __init__(self , url = 'https://manga-like.net/manga/'):
+    def __init__(self ,manga_name=None,ch=None, url = 'https://manga-like.net/manga/'):
         self.count = 1
         self.count_ch = 1
         
         self.url = url
         self.download_path= filedialog.askdirectory()
+        if(manga_name==None and ch==None):
+            manga_name = input('the name of manga :  ')
+            self.ch = input("chapter number : ")
+        else:
+            self.ch=ch
         
-        manga_name = input('the name of manga :  ')
+        self.path_manga = f'{self.download_path}/{manga_name}/' 
+        self.path_ch = self.path_manga + self.ch
+        
+       
+        
         name = manga_name.strip().replace(" ", "-")
+        
         self.new_url = url+name+"/"
+        
         try:
             os.mkdir(f'{self.download_path}/{manga_name}/')
         except Exception:
             pass
         
-        self.path_manga = f'{self.download_path}/{manga_name}/' 
-        self.ch = input("chapter number : ")
-        self.path_ch = self.path_manga + self.ch
         
         total = 10
         if self.ch == 'all':

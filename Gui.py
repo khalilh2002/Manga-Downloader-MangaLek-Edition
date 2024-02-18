@@ -5,6 +5,8 @@ from tkinter import font
 # debug
 from tkinter import messagebox
 
+from Cli import cli
+
 
 class Gui(tk.Tk):
     def __init__(self):
@@ -38,16 +40,20 @@ class Gui(tk.Tk):
         
         self.button_submit.pack()
         
+        
+        
     def askdirectory(self):
         self.download_Path = filedialog.askdirectory()
         #continue
         
+        
+        
     def submit_name_manga(self):
         self.manga = self.input_ask_name.get()
-        self.manga = self.manga.strip().replace(" ", "-")
         
-        self.chapter_number = self.inuput_chapter.get().strip()
-        #continue
+        self.chapter_number = self.inuput_chapter.get()
+        
+        cli(manga_name=self.manga , ch=self.chapter_number)
         
         
         
