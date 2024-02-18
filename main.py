@@ -10,7 +10,7 @@ count = 1
 count_ch = 1
 
 #new
-download_path="C:/Users/khali/Desktop/web_manga"  #use this for donwload path using tkinter or somthing else 
+download_path="C:/Users/Khalil El Houssine/Downloads/web_manga"  #use this for donwload path using tkinter or somthing else 
 download_path= filedialog.askdirectory()
 
 
